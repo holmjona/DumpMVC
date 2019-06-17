@@ -127,6 +127,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -175,6 +176,10 @@
     <Content Include="Views\Home\Partials\_Onion.cshtml" />
     <Content Include="Views\Home\Partials\_Cheese.cshtml" />
     <Content Include="Views\Home\Partials\_BurgerWithCheese.cshtml" />
+    <Content Include="Views\Order\Tots.cshtml" />
+    <Content Include="Views\Shared\French.cshtml" />
+    <Content Include="Views\Order\Hamburger.cshtml" />
+    <Content Include="Views\Order\Shake.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
