@@ -128,9 +128,16 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ChickenSandwich.cs" />
+    <Compile Include="Models\DAL.cs" />
+    <Compile Include="Models\Hamburger.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Sandwich.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -180,10 +187,12 @@
     <Content Include="Views\Shared\French.cshtml" />
     <Content Include="Views\Order\Hamburger.cshtml" />
     <Content Include="Views\Order\Shake.cshtml" />
+    <Content Include="Views\Shared\Display\_YesNo.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
+    <Content Include="Views\User\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

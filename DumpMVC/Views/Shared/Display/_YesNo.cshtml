@@ -1,0 +1,8 @@
+﻿@model KeyValuePair<bool,string>
+
+@if (Model.Key) {
+    <span class="yes">@Model.Value</span>
+} else {
+    <span class="no">@Model.Value</span>
+}
+@*@Model.Value*@

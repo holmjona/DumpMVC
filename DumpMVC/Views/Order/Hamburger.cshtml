@@ -1,7 +1,61 @@
-﻿
+﻿@model DumpMVC.Models.Hamburger
 @{
     ViewBag.Title = "Hamburger";
 }
 
+<style>
+    span {
+        color: #00B;
+        font-weight: bold;
+        /*border: 1px solid #F00;
+        display: block;*/
+    }
+
+    .odd {
+        font-size: 1.5em;
+    }
+
+    .even {
+        text-decoration: underline;
+    }
+
+    #four {
+        font-size: 4em;
+    }
+</style>
+
 <h2>Hamburger</h2>
 
+@*<span id="one" class="odd">1</span>
+<span class="even">2</span>
+<span class="odd">3</span>
+<span id="four" class="even">4</span>
+<span class="odd">5</span>
+<span class="even">6</span>
+
+@for (int i = 7; i < 43; i++) {
+    <span @if (i % 6 == 0) { @: class="odd"
+          } else { @: class="even"
+          }>@i</span>
+    }
+
+<a href="../Home/About">About</a>
+<hyp></hyp>
+<link></link>*@
+
+<ul id="parts">
+    <li><span>@Model.Bread      </span></li>
+    <li><span>@Html.Partial("Display/_YesNo", new KeyValuePair<bool, string>(Model.HasCheese, "Cheese")) </span></li>
+    <li><span>@Html.Partial("Display/_YesNo", new KeyValuePair<bool, string>(Model.HasPickles, "Pickles")) </span></li>
+    <li><span>@Html.Partial("Display/_YesNo", new KeyValuePair<bool, string>(Model.HasTomatos, "Tomatos")) </span></li>
+    <li><span>@Html.Partial("Display/_YesNo", new KeyValuePair<bool, string>(Model.HasLettuce, "Lettuce")) </span></li>
+    <li><span>@Html.Partial("Display/_YesNo", new KeyValuePair<bool, string>(Model.HasMayo, "Mayo")) </span></li>
+</ul>
+
+
+
+@*@for (int i = 43; i < 165; i++) {
+    <span @if (i % 6 == 0) { @: class="odd"
+          } else { @: class="even"
+          }>@i</span>
+    }*@

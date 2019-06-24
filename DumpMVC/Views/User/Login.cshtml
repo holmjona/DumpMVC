@@ -1,0 +1,82 @@
+﻿@model DumpMVC.Models.User
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+@ViewBag.Message
+@*<form method="post" action="http://teaching.jdholmes.net/postvget/reader/">
+    <label for="txtName">Name:</label>
+    <input id="txtName" name="Name" type="text" />
+    <label for="txtPass">Pass:</label>
+    <input id="txtPass" name="Pass" type="text" />
+    <label for="chkChicken">Do you like Chicken</label>
+    <input type="checkbox" id="chkChicken" name="LikesChicken" />
+    <label for="rbWhite">White:</label>
+    <input type="radio" id="rbWhite" name="Bread" value="White" />
+    <label for="rbWheat">Wheat:</label>
+    <input type="radio" id="rbWheat" name="Bread" value="Wheat" />
+    <label for="rbRye">Rye:</label>
+    <input type="radio" id="rbRye" name="Bread" value="Rye" />
+
+    <input type="submit" />
+</form>*@
+
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>User</h4>
+        <div class="form-group">
+            @Html.LabelFor(model => model.UserName)
+            @Html.EditorFor(model => model.UserName)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Password)
+            @Html.EditorFor(model => model.Password)
+        </div>
+
+        <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+}
+
+@*
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <h4>User</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Save" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+    }
+*@
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
